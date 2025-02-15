@@ -1,11 +1,15 @@
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+const signInBtn = document.getElementById('signInBtn');
+const signUpBtn = document.getElementById('signUpBtn');
+const signInForm = document.getElementById('signInForm');
+const signUpForm = document.getElementById('signUpForm');
 
-sign_up_btn.addEventListener("click", () =&gt; {
-  container.classList.add("sign-up-mode");
+// Toggle between Sign In and Sign Up Forms
+signInBtn.addEventListener('click', () => {
+    signInForm.classList.add('active');
+    signUpForm.classList.remove('active');
 });
 
-sign_in_btn.addEventListener("click", () =&gt; {
-  container.classList.remove("sign-up-mode");
+signUpBtn.addEventListener('click', () => {
+    signUpForm.classList.add('active');
+    signInForm.classList.remove('active');
 });
